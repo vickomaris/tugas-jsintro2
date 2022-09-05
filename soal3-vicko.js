@@ -14,7 +14,6 @@ var angka = [2, 25, 4, 14, 17, 30, 8];
 //var angka = [2, 25, 4, 1, 30, 18]; // aray ini digunakan untuk nilai tidak ditemukan
 angka.sort(function (a, b) { return a - b });//sort ascending
 
-
 if (nilaiAwal < nilaiAkhir  ) {
     if (angka.length < angka[4]) {
             var seleksiNilai = angka.filter(function (x) {

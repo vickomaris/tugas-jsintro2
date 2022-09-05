@@ -1,19 +1,30 @@
 //JAWABAN NO 2 JS INTRO 2 - VICKO
 // Buatlah program searching nama yang dapat dibatasi jumlah outputnya
 
+
 const nama = ["Abigail", "Alexandra", "Alison", "Amanda", "Angela", "Bella", "Carol", "Caroline", "Carolyn",
 "Deirdre", "Diana", "Elizabeth","Ella", "Faith", "Olivia", "Penelope"]
 
-function searchName(nameFrom, array, sampeBerapa) {
-    var result = []
-    for (let a = 0, b = 0; a < array.length; a++) {
-        if (array[a].toLowerCase().includes(nameFrom)) {
-            result[b] = array[a]
-            b++;
-        }
-        if (b == sampeBerapa) a = array.length;
-    }
-    return result;
+const searchingName = (kata, sampaiBerapa, callback) => {
+  const cari = nama.filter(checkNama => {
+      const hasil = checkNama.toLowerCase().includes(kata.toLowerCase())
+      return hasil
+      //console.log(hasil);
+  });
+  let result = cari.slice(0,sampaiBerapa)
+  return callback(result);
+  //console.log(result);
 }
 
-console.log(searchName("an", 3, nama))
+const callback = (result) => {
+  const output = result;
+  if(output.length === 0){
+      return "Data tidak ada"
+  }
+  else{
+      return output
+  }
+}
+
+const cetakHasil = searchingName("an",3,callback)
+console.log(cetakHasil)
