@@ -26,5 +26,5 @@ const callback = (result) => {
   }
 }
 
-const cetakHasil = searchingName("an",3,callback)
+const cetakHasil = searchingName("zz",4,callback)
 console.log(cetakHasil)

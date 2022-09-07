@@ -89,7 +89,7 @@ console.log(fruits5);
 const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
 fruits6.unshift("Lemon", "Pineapple");
 console.log(fruits5);
-//output ["Lemon", "Pineapple""Banana", "Orange", "Apple", "Mango"]
+//output ["Lemon", "Pineapple", "Banana", "Orange", "Apple", "Mango"]
 
 
 //toString()
